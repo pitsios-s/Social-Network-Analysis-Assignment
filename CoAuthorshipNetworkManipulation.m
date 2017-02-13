@@ -73,6 +73,8 @@ W1(Idiag) = 0;
 [D, P] = FloydWarshall(W1);
 CC = ComputeClosenessCentrality(D, Idiag);
 
+% Extract Betweenness Centrality measure for each author.
+
 % Report top 10 authors according to Degree Centraluity.
 N = 10;
 MeasureName = 'Degree Centrality';
@@ -83,7 +85,3 @@ ReportTopNAuthors(MeasureValues, MeasureName, N, authors);
 N = 10;
 MeasureName = 'Closeness Centrality';
 ReportTopNAuthors(CC, MeasureName, N, authors);
-
-
-
-
