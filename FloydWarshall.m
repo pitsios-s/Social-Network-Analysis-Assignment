@@ -19,7 +19,7 @@ D = W;
 P = cell(nodes_num);
 for i = 1:1:nodes_num
     for j = 1:1:nodes_num
-        P{i, j} = [-1];
+        P{i, j} = -1;
     end;
 end;
 
@@ -29,9 +29,9 @@ for k = 1:1:nodes_num
         for j = 1:1:nodes_num
             if (D(i, j) > D(i, k) + D(k, j))
                 D(i, j) = D(i, k) + D(k, j);
-                P{i, j} = [k];
+                P{i, j} = k;
             elseif (D(i, j) == D(i, k) + D(k, j) && i ~= k && j ~= k)
-                P{i, j} = [P{i, j}, k];
+                P{i, j} = [P{i, j} k];
             end;
         end;
     end;

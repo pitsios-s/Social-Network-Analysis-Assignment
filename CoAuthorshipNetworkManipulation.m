@@ -74,9 +74,13 @@ W1(Idiag) = 0;
 CC = ComputeClosenessCentrality(D, Idiag);
 
 % Extract Betweenness Centrality measure for each author.
+%BC = ComputeBetweennessCentrality(P);
 
 % Report top 10 authors according to Degree Centraluity.
 ReportTopNAuthors(Degrees, 'Degree Centrality', 10, authors);
 
 % Report top 10 authors according to Closeness Centraluity.
 ReportTopNAuthors(CC, 'Closeness Centrality', 10, authors);
+
+% Report top 10 authors according to Betweenness Centraluity.
+%ReportTopNAuthors(BC, 'Betweenness Centrality', 10, authors);

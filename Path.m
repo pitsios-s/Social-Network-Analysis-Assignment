@@ -5,10 +5,10 @@ function [SP] = Path(u, v, P)
 % predecessor matrix P and the final shortest paths distance matrix D.
 % Note that vector SP must be initially passed as an empty matrix.
 %
-%  Source: http://stackoverflow.com/questions/11370041/floyd-warshall-all-shortest-paths
+% Source: http://stackoverflow.com/questions/11370041/floyd-warshall-all-shortest-paths
 
 SP = {};
-if (~isempty(P{u, v}))
+if (~isempty(P{u, v}) && u ~= v)
     for (k = P{u, v})
         if (k == -1)
             SP{end + 1} = [u v];
