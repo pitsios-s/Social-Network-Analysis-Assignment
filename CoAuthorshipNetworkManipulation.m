@@ -54,9 +54,9 @@ end;
 Idiag = 1:N+1:N*N;
 
 % Re-initialize the overall weight matrix W so that fundamental social
-% network analysis tasks can be performed. W should be a binary adjacency 
-% matrix so that W[i,j] = 1 indicates the presence of an edge between 
-% authors i and j. Moreover, the diagonal elements of W should also be set 
+% network analysis tasks can be performed. W should be a binary adjacency
+% matrix so that W[i,j] = 1 indicates the presence of an edge between
+% authors i and j. Moreover, the diagonal elements of W should also be set
 % to zero.
 W0 = W;
 W0(W0>1) = 1;
@@ -76,12 +76,7 @@ CC = ComputeClosenessCentrality(D, Idiag);
 % Extract Betweenness Centrality measure for each author.
 
 % Report top 10 authors according to Degree Centraluity.
-N = 10;
-MeasureName = 'Degree Centrality';
-MeasureValues = Degrees;
-ReportTopNAuthors(MeasureValues, MeasureName, N, authors);
+ReportTopNAuthors(Degrees, 'Degree Centrality', 10, authors);
 
 % Report top 10 authors according to Closeness Centraluity.
-N = 10;
-MeasureName = 'Closeness Centrality';
-ReportTopNAuthors(CC, MeasureName, N, authors);
+ReportTopNAuthors(CC, 'Closeness Centrality', 10, authors);
