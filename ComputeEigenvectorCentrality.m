@@ -5,7 +5,7 @@ function [ EVC ] = ComputeEigenvectorCentrality (W)
  epsilon = 1e-10000;
  max_iters = 10000;
  N = size(W, 1);
- X0 = repmat(0, 1, N);
+ X0 = zeros(1, N);
  X1 = repmat(1/N, 1, N);
  iter = 0;
  while (sum(abs(X0 - X1)) > epsilon && iter < max_iters)
@@ -17,5 +17,5 @@ function [ EVC ] = ComputeEigenvectorCentrality (W)
  end;
 
 EVC = X1;
-iter
+
 end
