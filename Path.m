@@ -1,9 +1,7 @@
 function [SP] = Path(u, v, P)
 
-% This function returns the vector SP which corresponds to the sequence of
-% graph nodes composing the shortest path from node u to node v given the
-% predecessor matrix P and the final shortest paths distance matrix D.
-% Note that vector SP must be initially passed as an empty matrix.
+% This function returns a cell array SP where each cell contains one or more lists of the sequence of graph nodes
+% composing the shortest paths from node u to node v, given the predecessor matrix P.
 %
 % Source: http://stackoverflow.com/questions/11370041/floyd-warshall-all-shortest-paths
 

@@ -1,4 +1,6 @@
 function [ BC ] = ComputeBetweennessCentrality( P )
+% This function computes the normalized betweenness centrality of all nodes in the graph, given the predecessor matrix P
+% BC(i) contains the betweenness centrality of node i.
 
 N = size(P, 1);
 
@@ -11,7 +13,7 @@ for i = 1:1:N-1
     for j = i + 1:1:N
         path = Path(i, j, P);
         NumOfPaths = length(path);
-        
+
         for k = 1:1:NumOfPaths
             CurrentPath = path{k};
             NumOfElements = length(CurrentPath);
@@ -27,4 +29,3 @@ end;
 BC = BC / ( ((N-1) * (N-2)) / 2);
 
 end
-

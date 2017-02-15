@@ -5,18 +5,18 @@ function [D, P] = FloydWarshall(W)
 % matrix W. Matrix W is assummed to be properly initialized.
 % Element D[i,j] of matrix D stores the shortest path distance from node i
 % to node j.
-% Matrix P is the corresponding predecessor matrix so that element P[i,j]
-% stores the last vertex traversed within the shortest path connecting
+% Cell array P, is the corresponding predecessor matrix so that element P{i,j}
+% stores a vector of all the last vertexes traversed within the shortest path connecting
 % nodes i and j.
 
 % Get the number of nodes pertaining to the graph.
-nodes_num = size(W,1);
+nodes_num = size(W, 1);
 
 % Initialize internal matrix D.
 D = W;
 
 % Initialize internal matrix P.
-P = cell(nodes_num);
+P = cell(1, nodes_num);
 for i = 1:1:nodes_num
     for j = 1:1:nodes_num
         P{i, j} = -1;
