@@ -116,16 +116,16 @@ for i = 1:1:NumOfComponentsToInvestigate
     W1(Idiag) = 0;
 
     % Call Floyd Warshall Algorithm
-    % [D, P] = FloydWarshall(W1);
+    [D, P] = FloydWarshall(W1);
 
     % Extract closeness centrality measure for each author in the component.
-    % CC = ComputeClosenessCentrality(D, Idiag);
+    CC = ComputeClosenessCentrality(D);
 
     % Extract betweenness centrality measure for each author in the component.
-    % BC = ComputeBetweennessCentrality(P);
+    BC = ComputeBetweennessCentrality(P);
 
     % Extract eccentricity centrality measure for each author in the component.
-    % EC = ComputeEccentricityCentrality(D);
+    EC = ComputeEccentricityCentrality(D);
 
     % Extract eigenvecto centrality measure for each author in the component.
     W1(W1 == inf) = 0;
@@ -133,13 +133,13 @@ for i = 1:1:NumOfComponentsToInvestigate
 
     % Report top 10 authors according to Closeness Centrality.
     if (component_size >= NumOfTopAuthorsToRetrieve)
-        N = 5;
+        N = NumOfTopAuthorsToRetrieve;
     else
         N = component_size;
     end;
 
-    % ReportTopNAuthors(CC, 'Closeness Centrality', N, AuthorsInComponent, i, 'descend');
-    % ReportTopNAuthors(BC, 'Betweenness Centrality', N, AuthorsInComponent, i, 'descend');
-    % ReportTopNAuthors(EC, 'Eccentricity Centrality', N, AuthorsInComponent, i, 'ascend');
+    ReportTopNAuthors(CC, 'Closeness Centrality', N, AuthorsInComponent, i, 'descend');
+    ReportTopNAuthors(BC, 'Betweenness Centrality', N, AuthorsInComponent, i, 'descend');
+    ReportTopNAuthors(EC, 'Eccentricity Centrality', N, AuthorsInComponent, i, 'ascend');
     ReportTopNAuthors(EVC, 'Eigenvector Centrality', N, AuthorsInComponent, i, 'descend');
 end;

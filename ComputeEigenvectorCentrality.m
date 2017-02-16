@@ -1,21 +1,18 @@
 function [ EVC ] = ComputeEigenvectorCentrality (W)
-% This function computes the eigenvector centrality of each node, based on the adjacency matrix W
+% This function computes the eigenvector centrality of each node, based on the adjacency matrix W.
+% For the computation, the POWER ITERATION method is utilized.
 % Returns a vector EVC, where EVC(i) is the eigenvector centrality of node i
 
- epsilon = 1e-10000;
- max_iters = 10000;
- N = size(W, 1);
- X0 = zeros(1, N);
- X1 = repmat(1/N, 1, N);
- iter = 0;
- while (sum(abs(X0 - X1)) > epsilon && iter < max_iters)
-     X0 = X1;
-     X1 = X1 * W;
-     M = max(X1);
-     X1 = X1 / M;
-     iter = iter + 1;
- end;
+% Maximum Number of iterations to perform
+max_iters = 10000;
 
-EVC = X1;
+N = size(W, 1);
+v = repmat(1, 1, N);
+for i = 1:max_iters
+    x = v * W;
+    v = x / norm(x);
+end
+
+EVC = v;
 
 end
