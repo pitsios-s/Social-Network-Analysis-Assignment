@@ -1,3 +1,7 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function [ BC ] = ComputeBetweennessCentrality( P )
 % This function computes the normalized betweenness centrality of all nodes in the graph, given the predecessor matrix P
 % BC(i) contains the betweenness centrality of node i.

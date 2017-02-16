@@ -1,3 +1,7 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 % This script performs fundamental social network analysis tasks on the
 % collaboration graph for the ICMB conference for the time period between
 % 2002 and 2013.

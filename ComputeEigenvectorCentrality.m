@@ -1,3 +1,7 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function [ EVC ] = ComputeEigenvectorCentrality (W)
 % This function computes the eigenvector centrality of each node, based on the adjacency matrix W.
 % For the computation, the POWER ITERATION method is utilized.

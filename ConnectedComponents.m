@@ -1,7 +1,11 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function [C] = ConnectedComponents(NL)
 
-% This function extracts the connnected components of a given undirected 
-% graph whose neighbours' list NL is given as input. C is a cell array of 
+% This function extracts the connnected components of a given undirected
+% graph whose neighbours' list NL is given as input. C is a cell array of
 % vectors so that each vector stores the indices of each connected component.
 
 % Initialize the cell array C storing the connected components of the graph.
@@ -40,26 +44,25 @@ for v = 1:1:nodes_num
         C{components_num} = component;
     end;
 end;
-        
+
 
     function [Q] = enqueue(Q,element)
-        
-    % This is a subfunction implementing the enqueue operation within a 
+
+    % This is a subfunction implementing the enqueue operation within a
     % queue which is realzed as a vector of elements
-    
+
     Q = [Q,element];
-    
+
     end
 
     function [Q,element] = dequeue(Q)
-        
-    % This is a subfunction implementing the dequeue operation within a 
-    % queue queue which is realized as a vector of elements.    
+
+    % This is a subfunction implementing the dequeue operation within a
+    % queue queue which is realized as a vector of elements.
 
     element = Q(1);
     Q = Q(2:end);
-    
-    end
-    
-end
 
+    end
+
+end

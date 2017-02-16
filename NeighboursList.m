@@ -1,7 +1,11 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function [NL] = NeighboursList(W)
 
-% This function extracts the neighbours' list for corresponding to the 
-% weight matrix W which is assummed to binary matrix indicating the 
+% This function extracts the neighbours' list for corresponding to the
+% weight matrix W which is assummed to binary matrix indicating the
 % presence or absence of an edge between a given pair of nodes. Diagonal
 % elements of matrix W are also assummed to be zero.
 
@@ -15,4 +19,3 @@ for v = 1:1:nodes_num
 end;
 
 end
-

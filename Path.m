@@ -1,3 +1,7 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function [SP] = Path(u, v, P)
 
 % This function returns a cell array SP where each cell contains one or more lists of the sequence of graph nodes

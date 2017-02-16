@@ -1,3 +1,7 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function [D, P] = FloydWarshall(W)
 
 % This function computes shortest paths' distances for each pair of nodes

@@ -1,3 +1,7 @@
+% Dernika Eirini -> BAPT1509
+% Pitsios Stamatis -> BAPT1502
+% Xanthopoulos Christos - George -> BAPT1504
+
 function ReportTopNAuthors(MeasureValues, MeasureName, N, authors, ComponentNumber, SortType)
 
 % This function reports the top N authors ranked by the measure identified
