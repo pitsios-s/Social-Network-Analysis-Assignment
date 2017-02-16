@@ -127,11 +127,11 @@ for i = 1:1:NumOfComponentsToInvestigate
     % Extract eccentricity centrality measure for each author in the component.
     EC = ComputeEccentricityCentrality(D);
 
-    % Extract eigenvecto centrality measure for each author in the component.
+    % Extract eigenvector centrality measure for each author in the component.
     W1(W1 == inf) = 0;
     EVC = ComputeEigenvectorCentrality(W1);
 
-    % Report top 10 authors according to Closeness Centrality.
+    % Fix the number of top authors to retrieve.
     if (component_size >= NumOfTopAuthorsToRetrieve)
         N = NumOfTopAuthorsToRetrieve;
     else

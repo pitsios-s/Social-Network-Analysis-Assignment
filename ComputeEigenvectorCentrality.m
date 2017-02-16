@@ -11,7 +11,7 @@ v = repmat(1, 1, N);
 for i = 1:max_iters
     x = v * W;
     v = x / norm(x);
-end
+end;
 
 EVC = v;
 
