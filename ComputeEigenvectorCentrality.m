@@ -11,7 +11,7 @@ function [ EVC ] = ComputeEigenvectorCentrality (W)
 max_iters = 10000;
 
 N = size(W, 1);
-v = repmat(1, 1, N);
+v = ones(1, N);
 for i = 1:max_iters
     x = v * W;
     v = x / norm(x);

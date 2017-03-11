@@ -11,7 +11,7 @@ function [SP] = Path(u, v, P)
 
 SP = {};
 if (~isempty(P{u, v}) && u ~= v)
-    for (k = P{u, v})
+    for k = P{u, v}
         if (k == -1)
             SP{end + 1} = [u v];
         else

@@ -27,7 +27,7 @@ for v = 1:1:nodes_num
         visited(v) = true;
         while(~isempty(Q))
             [Q,w] = dequeue(Q); % w is a node in this component.
-            component = [component,w];
+            component = [component, w];
             % Get all nodes neighbouring w.
             node_neighbours = NL{w};
             % Traverse each unvisited node neighbouring w.
